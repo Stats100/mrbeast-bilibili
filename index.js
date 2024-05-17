@@ -93,7 +93,6 @@ app.get('/daily', (_req, res) => {
 app.get('*', async (_req, res) => {
     await fetch(url)
         .then(response => {
-            console.dir(response, { depth: null });
             return response.json();
         })
         .then(data => {
